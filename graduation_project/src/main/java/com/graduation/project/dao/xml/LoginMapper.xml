@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduation.project.dao.LoginMapper">
+
+    <select id="loginQuery" resultType="com.graduation.project.vo.resp.UserLoginVoResp">
+        SELECT
+            id
+        FROM
+            sys_user
+        WHERE
+            name = #{userLoginVo.userName}
+        AND password = #{userLoginVo.password}
+        AND role_id = #{userLoginVo.userType}
+    </select>
+</mapper>

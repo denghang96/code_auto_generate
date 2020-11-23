@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    static-path-pattern: /code/static/**
+    view:
+      prefix: /WEB-INF/view/code/jsp/
+      suffix: .jsp
+package:
+  prefix-request-mapping: /api/ #controller的requestMapping前缀
+  file-path: C:/Users/Administrator/Desktop/code_auto_generate/graduation_project/src/main/java/ #代码生成路径
+  resp-data-name: RespData #返回对象的名称
+  resp-data-path: com.graduation.project.common.resp #返回对象RespData的路径
